@@ -1,0 +1,71 @@
+<html>
+<head>
+<script src='timestudy.js'></script>
+<style>
+	body {font-family:arial;}
+	.hrSection {display:block;align:center;margin:auto;border:0px solid black;padding:25px 0 25px 0;}
+	#reset,#activity,#download,#deleteDownload {display:block;align:center;margin:auto;width:100px; height:40px;}
+	.inputCenter {display:block;align:center;margin:auto;border:0px solid black;width:350px;}
+	#selectDiv {float:left;}
+	#rdiv {float:right;margin-top:50px;}
+	#start{float:left;width:100px; height:40px;border:3px solid green;}
+	#end{float:right;width:100px; height:40px;border:3px solid red;}
+	#activityLabel{display:block;}
+	#activity {width:170px;font-size:150%;}
+	.clear{clear:both;}
+	#idea,#achieved{display:block;align:center;margin:auto;width:500px; height:100px;}
+	p#ideaLabel,p#achievedLabel {display:block;align:center;margin:auto;width:500px; height:20px;font-size:20px;}
+	#downloadSection,#startStopSection{padding-top:100px;}
+	#reset{width:150px;height:80px;}
+</style>
+</head>
+<body>
+
+<div class="hrSection">
+	<p id="ideaLabel">Idea</p>
+	<textarea id="idea"></textarea>
+</div>
+<div class="hrSection">
+	<p id="achievedLabel">Achieved</p>
+	<textarea id="achieved"></textarea>
+</div>
+<div class = "hrSection">
+	<div class = "inputCenter">
+		<div id="selectDiv">
+			<p id="activityLabel">Activity Category</p>
+			<select name="activity" id = "activity">
+				<option value="none"></option>
+				<option value="conceptResearch">Concept Research</option>
+				<option value="queryWriting">Query Writing</option>
+				<option value="queryTesting">Query Testing</option>
+				<option value="queryTesting">Query Change Request</option>
+				<option value="queryTesting">Query Maintenance</option>
+				<option value="queryToolBuilding">Query Tool Building</option>
+				<option value="queryToolBuilding">Research Tool Building</option>
+				<option value="etl">ETL</option>
+				<option value="etlAutomationBuilding">ETL Automation Building</option>
+				<option value="etlAutomationMaintenance">ETL Automation Maintenance</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+		<div id="rdiv">
+			<button id='reset'>Submit</button>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="hrSection" id="startStopSection">
+	<div class = "inputCenter">
+		<button id='start'>Start</button>
+		<button id='end'>End</button>
+	</div>
+</div>
+<div class="hrSection" id="downloadSection">
+	<button id='download'>Download</button>
+</div>
+<div class="hrSection">
+	<button id='deleteDownload'>Delete and Download</button>
+</div>
+<iframe id="wiki" style="width:100%;height:1000px"></iframe>
+</body>
+</html>
